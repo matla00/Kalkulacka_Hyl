@@ -17,8 +17,6 @@ namespace Kalkulacka_Hyl
         public MainPage()
         {
             InitializeComponent();
-
-            Label_Equation.Text = "155 + 5";
         }
 
         void Button_Click(object sender, EventArgs args)
@@ -29,18 +27,22 @@ namespace Kalkulacka_Hyl
             if(btn.Text == "C")
             {
                 Label_Equation.Text = "";
-            }else if (btn.Text == "=")
+            }
+            else if (btn.Text == "=")
             {
                 Label_Result.Text = new DataTable().Compute(Label_Equation.Text, null).ToString();
-            }else if (btn.Text == "B" && Label_Equation.Text.Length > 0)
+            }
+            else if (btn.Text == "B" && Label_Equation.Text.Length > 0)
             {
                 Label_Equation.Text = Label_Equation.Text.Remove(Label_Equation.Text.Length - 1);
-            }else
+            }
+            else
             {
                 if ("/*-+".Contains(btn.Text) && !Label_Equation.Text.EndsWith(btn.Text))
                 {
                     Label_Equation.Text += btn.Text;
-                }else if ("0123456789".Contains(btn.Text))
+                }
+                else if ("0123456789".Contains(btn.Text))
                 {
                     Label_Equation.Text += btn.Text;
                 }
