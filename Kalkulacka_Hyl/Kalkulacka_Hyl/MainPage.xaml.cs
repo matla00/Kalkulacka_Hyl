@@ -38,7 +38,7 @@ namespace Kalkulacka_Hyl
             }
             else
             {
-                if ("/*-+".Contains(btn.Text) && !Label_Equation.Text.EndsWith(btn.Text))
+                if ("/*-+.".Contains(btn.Text) && !Label_Equation.Text.EndsWith(btn.Text))
                 {
                     Label_Equation.Text += btn.Text;
                 }
